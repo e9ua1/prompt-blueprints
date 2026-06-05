@@ -75,7 +75,9 @@ prompt-blueprints/
 
 아래 **Layer 0 → 6**은 수학 기초에서 출발해 위로 쌓이는 **수직 커리큘럼**입니다. 상위 레이어 블루프린트는 하위 레이어를 *선행 학습*으로 명시적으로 참조합니다.
 
-### Layer 0 — 수학적 기초 (10)
+<details>
+<summary><b>Layer 0 — 수학적 기초 (10)</b></summary>
+
 > 모든 ML이 딛고 선 땅. 공리에서 출발해 직접 유도한다.
 
 | 블루프린트 | 컨셉 |
@@ -91,7 +93,11 @@ prompt-blueprints/
 | [Stochastic Differential Equations](blueprints/ai/layer0/prompt-sde-deep-dive.md) | 브라운 운동을 미분·적분하는 수학, Diffusion의 토대 |
 | [Information Geometry](blueprints/ai/layer0/prompt-information-geometry-deep-dive.md) | 확률분포 공간의 기하학 — Fisher 정보의 리만 구조 |
 
-### Layer 1 — 고전 ML & 학습 이론 (5)
+</details>
+
+<details>
+<summary><b>Layer 1 — 고전 ML & 학습 이론 (5)</b></summary>
+
 > 딥러닝 이전, 그리고 그 밑에 깔린 학습의 수학.
 
 | 블루프린트 | 컨셉 |
@@ -102,7 +108,11 @@ prompt-blueprints/
 | [Bayesian ML](blueprints/ai/layer1/prompt-bayesian-ml-deep-dive.md) | 불확실성의 ML — 변분 추론·MCMC·Bayesian DL |
 | [Graphical Models](blueprints/ai/layer1/prompt-graphical-models-deep-dive.md) | 조건부 독립이 그래프 기하로 나타나는 아름다움 |
 
-### Layer 2 — 딥러닝 이론 (4)
+</details>
+
+<details>
+<summary><b>Layer 2 — 딥러닝 이론 (4)</b></summary>
+
 > 신경망이 *왜* 동작하고 *왜* 일반화하는가.
 
 | 블루프린트 | 컨셉 |
@@ -112,7 +122,11 @@ prompt-blueprints/
 | [Generalization Theory](blueprints/ai/layer2/prompt-generalization-theory-deep-dive.md) | 왜 딥러닝이 일반화하는가 — 고전이론의 실패와 현대적 설명 |
 | [Regularization Theory](blueprints/ai/layer2/prompt-regularization-theory-deep-dive.md) | Bayesian prior·앙상블·Normalization을 하나의 프레임으로 |
 
-### Layer 3 — 핵심 아키텍처 (5)
+</details>
+
+<details>
+<summary><b>Layer 3 — 핵심 아키텍처 (5)</b></summary>
+
 > 현대 딥러닝을 떠받치는 다섯 골격.
 
 | 블루프린트 | 컨셉 |
@@ -123,7 +137,11 @@ prompt-blueprints/
 | [Graph Neural Network](blueprints/ai/layer3/prompt-gnn-deep-dive.md) | Spectral·Spatial·Message Passing 통합, WL 표현력 |
 | [Generative Model](blueprints/ai/layer3/prompt-generative-model-deep-dive.md) | 암묵적(GAN) vs 명시적(VAE·Flow·Diffusion) likelihood |
 
-### Layer 4-A — 강화학습 (6)
+</details>
+
+<details>
+<summary><b>Layer 4-A — 강화학습 (6)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [RL Foundations](blueprints/ai/layer4-A/prompt-rl-foundations-deep-dive.md) | MDP·Bellman·DP의 엄밀한 증명 |
@@ -133,7 +151,11 @@ prompt-blueprints/
 | [Advanced RL](blueprints/ai/layer4-A/prompt-advanced-rl-deep-dive.md) | TRPO·PPO·SAC·TD3를 monotonic improvement로 통합 |
 | [RL Theory](blueprints/ai/layer4-A/prompt-rl-theory-deep-dive.md) | Bandit부터 PAC-MDP까지 sample complexity 이론 |
 
-### Layer 4-B — 대규모 언어 모델 (4)
+</details>
+
+<details>
+<summary><b>Layer 4-B — 대규모 언어 모델 (4)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [LLM Pretraining](blueprints/ai/layer4-B/prompt-llm-pretraining-deep-dive.md) | Scaling Law·훈련 안정성·데이터·평가의 이론적 기반 |
@@ -141,7 +163,11 @@ prompt-blueprints/
 | [LLM Inference](blueprints/ai/layer4-B/prompt-llm-inference-deep-dive.md) | Memory·Throughput·Latency의 공학적 trade-off |
 | [LLM Efficiency](blueprints/ai/layer4-B/prompt-llm-efficiency-deep-dive.md) | Parameter·Memory·Compute·Latency 모든 축의 효율화 |
 
-### Layer 4-C — 비전 & 생성 (4)
+</details>
+
+<details>
+<summary><b>Layer 4-C — 비전 & 생성 (4)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Vision Transformer](blueprints/ai/layer4-C/prompt-vision-transformer-deep-dive.md) | ViT부터 SSL·Hierarchical·Multimodal까지 |
@@ -149,18 +175,30 @@ prompt-blueprints/
 | [Diffusion Model](blueprints/ai/layer4-C/prompt-diffusion-model-deep-dive.md) | DDPM·Score-SDE·DDIM·Flow Matching을 stochastic process로 |
 | [3D & Neural Rendering](blueprints/ai/layer4-C/prompt-3d-neural-rendering-deep-dive.md) | PBR부터 NeRF·Gaussian Splatting·3D Generation까지 |
 
-### Layer 4-D — 자연어 처리 (2)
+</details>
+
+<details>
+<summary><b>Layer 4-D — 자연어 처리 (2)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [NLP Foundations](blueprints/ai/layer4-D/prompt-nlp-foundations-deep-dive.md) | Distributional Hypothesis부터 Subword Tokenization까지 |
 | [Pretrained LM](blueprints/ai/layer4-D/prompt-pretrained-lm-deep-dive.md) | BERT·GPT·T5 objective 분해와 전이학습·ICL 이론 |
 
-### Layer 4-E — 오디오 & 음성 (1)
+</details>
+
+<details>
+<summary><b>Layer 4-E — 오디오 & 음성 (1)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Audio & Speech](blueprints/ai/layer4-E/prompt-audio-speech-deep-dive.md) | Signal Processing부터 Neural Codec·Speech LLM까지 |
 
-### Layer 5 — 시스템 & 프로덕션 (4)
+</details>
+
+<details>
+<summary><b>Layer 5 — 시스템 & 프로덕션 (4)</b></summary>
+
 > 모델이 아니라 모델을 *돌리는* 인프라의 수학.
 
 | 블루프린트 | 컨셉 |
@@ -170,7 +208,11 @@ prompt-blueprints/
 | [Efficient ML](blueprints/ai/layer5/prompt-efficient-ml-deep-dive.md) | Compression·Acceleration·Kernel·Serving 통합 |
 | [Experimental Statistics & MLOps](blueprints/ai/layer5/prompt-experimental-statistics-mlops-deep-dive.md) | Data·Model·Experiment 품질 보장과 statistical rigor |
 
-### Layer 6 — 프론티어 (3)
+</details>
+
+<details>
+<summary><b>Layer 6 — 프론티어 (3)</b></summary>
+
 > 지금 가장 빠르게 움직이는 최전선.
 
 | 블루프린트 | 컨셉 |
@@ -179,6 +221,8 @@ prompt-blueprints/
 | [Mechanistic Interpretability](blueprints/ai/layer6/prompt-mechanistic-interpretability-deep-dive.md) | Circuit·Feature·Mechanism의 수학적 증명 |
 | [Retrieval & RAG](blueprints/ai/layer6/prompt-retrieval-rag-deep-dive.md) | BM25부터 Dense Retrieval·ANN·Hybrid·GraphRAG까지 |
 
+</details>
+
 ---
 
 ## 🛠️ Dev 카탈로그 (87개)
@@ -186,7 +230,9 @@ prompt-blueprints/
 시스템의 **내부 원리**를 도구 출력으로 증명하는 백엔드·프론트엔드·모바일·인프라 레포들입니다.
 경로에 공백·특수문자가 있어 링크는 꺾쇠(`< >`)로 감쌌습니다.
 
-### ☕ Java Core (7)
+<details>
+<summary><b>☕ Java Core (7)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [JVM Deep Dive](<blueprints/dev/java core/prompt-jvm-deep-dive.md>) | Java 코드를 작성하는 것과, 그것이 어떻게 살아 움직이는지 아는 것은 다르다 |
@@ -197,7 +243,11 @@ prompt-blueprints/
 | [오브젝트 (Object)](<blueprints/dev/java core/prompt-object.md>) | 이론이 먼저가 아니라 코드가 먼저다 |
 | [Unit Testing](<blueprints/dev/java core/prompt-unit-testing.md>) | 테스트를 작성하는 것과, 올바른 테스트를 작성하는 것은 다르다 |
 
-### 🌱 Spring Ecosystem (8)
+</details>
+
+<details>
+<summary><b>🌱 Spring Ecosystem (8)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Spring Core](<blueprints/dev/spring ecosystem/prompt-spring-core-deep-dive.md>) | 스프링 컨테이너가 Bean을 관리하는 모든 비밀 |
@@ -209,7 +259,11 @@ prompt-blueprints/
 | [Spring Batch](<blueprints/dev/spring ecosystem/prompt-spring-batch-deep-dive.md>) | 수백만 건 데이터를 안정적으로 처리하는 메커니즘 |
 | [Spring Cloud](<blueprints/dev/spring ecosystem/prompt-spring-cloud-deep-dive.md>) | 분산 시스템을 위한 Spring Cloud 패턴 완전 정복 |
 
-### 🗄️ Database (6)
+</details>
+
+<details>
+<summary><b>🗄️ Database (6)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Database Internals](<blueprints/dev/database/prompt-database-internals.md>) | SQL을 쓰는 것과, DB가 내부에서 무슨 일을 하는지 아는 것은 다르다 |
@@ -219,7 +273,11 @@ prompt-blueprints/
 | [Elasticsearch](<blueprints/dev/database/prompt-elasticsearch-deep-dive.md>) | Lucene이 역색인을 구축하고 샤드에서 스코어를 병합하는 방식 |
 | [DB Migration](<blueprints/dev/database/prompt-db-migration-deep-dive.md>) | 스키마 변경을 코드처럼 관리하고 안전하게 적용하는 것 |
 
-### 🌐 Frontend : Web (13)
+</details>
+
+<details>
+<summary><b>🌐 Frontend : Web (13)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [JavaScript](<blueprints/dev/frontend : web/prompt-javascript-deep-dive.md>) | 실행 컨텍스트·스코프·프로토타입이 명세 수준에서 동작하는 방식 |
@@ -236,7 +294,11 @@ prompt-blueprints/
 | [Web APIs & WASM](<blueprints/dev/frontend : web/prompt-web-apis-wasm-deep-dive.md>) | DOM·fetch·Worker의 내부 구현과 WASM 경계 |
 | [Real-time & Client Networking](<blueprints/dev/frontend : web/prompt-realtime-client-networking-deep-dive.md>) | WebSocket·SSE·WebRTC가 내부에서 동작하는 방식 |
 
-### 📱 Mobile — Android (8)
+</details>
+
+<details>
+<summary><b>📱 Mobile — Android (8)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Android Architecture](<blueprints/dev/mobile — android/prompt-android-architecture-deep-dive.md>) | 단방향 흐름·의존성 규칙·모듈 경계가 무엇을 보장하는가 |
@@ -248,7 +310,11 @@ prompt-blueprints/
 | [Kotlin](<blueprints/dev/mobile — android/prompt-kotlin-deep-dive.md>) | suspend가 상태머신으로 컴파일되고 구조적 동시성이 보장하는 것 |
 | [Local-first & Sync (CRDT)](<blueprints/dev/mobile — android/prompt-local-first-sync-deep-dive.md>) | 로컬 우선 + 최종 수렴으로 오프라인에서도 즉각 반응하는 앱 |
 
-### 🍎 Mobile — iOS (7)
+</details>
+
+<details>
+<summary><b>🍎 Mobile — iOS (7)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Swift](<blueprints/dev/mobile — ios/prompt-swift-deep-dive.md>) | ARC·값 타입·프로토콜이 메모리와 디스패치를 다루는 방식 |
@@ -259,7 +325,11 @@ prompt-blueprints/
 | [SwiftUI Internals](<blueprints/dev/mobile — ios/prompt-swiftui-internals-deep-dive.md>) | View Identity·상태 저장·AttributeGraph 갱신의 내부 |
 | [iOS Performance](<blueprints/dev/mobile — ios/prompt-ios-performance-deep-dive.md>) | hitch·hang·런치·메모리 비용을 Instruments로 특정해 고치기 |
 
-### 🏗️ Infrastructure & DevOps (9)
+</details>
+
+<details>
+<summary><b>🏗️ Infrastructure & DevOps (9)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Linux for Backend](<blueprints/dev/infrastructure & devOps/prompt-linux-for-backend-deep-dive.md>) | 커널이 I/O·메모리를 관리해 앱 성능을 결정하는 방식 |
@@ -272,7 +342,11 @@ prompt-blueprints/
 | [Service Mesh](<blueprints/dev/infrastructure & devOps/prompt-service-mesh-deep-dive.md>) | Sidecar가 트래픽을 가로채고 컨트롤 플레인이 제어하는 방식 |
 | [Git In-Depth](<blueprints/dev/infrastructure & devOps/prompt-git-in-depth.md>) | `.git` 디렉토리 안에서 무슨 일이 — Plumbing부터 Porcelain까지 |
 
-### 🧱 Architecture & Design (5)
+</details>
+
+<details>
+<summary><b>🧱 Architecture & Design (5)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Architecture Patterns](<blueprints/dev/architecture & design/prompt-architecture-patterns.md>) | 아키텍처는 폴더 구조가 아니다 — 변경이 전파되는 방향이다 |
@@ -281,7 +355,11 @@ prompt-blueprints/
 | [MSA](<blueprints/dev/architecture & design/prompt-msa-deep-dive.md>) | 왜 그 경계에서 쪼개고, 이후 데이터 일관성을 어떻게 보장하는가 |
 | [System Design](<blueprints/dev/architecture & design/prompt-system-design-deep-dive.md>) | 기술을 아는 것과, 수백만 사용자용 시스템을 설계하는 것 |
 
-### 🔀 Foundations (5)
+</details>
+
+<details>
+<summary><b>🔀 Foundations (5)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Computer Architecture](<blueprints/dev/foundations/prompt-computer-architecture-deep-dive.md>) | 코드가 CPU·캐시·메모리에서 실제로 무슨 일을 하는가 |
@@ -290,48 +368,80 @@ prompt-blueprints/
 | [Cryptography](<blueprints/dev/foundations/prompt-cryptography-deep-dive.md>) | 그 암호가 왜 안전하고 어떻게 깨지는가 |
 | [GPU & Graphics Pipeline](<blueprints/dev/foundations/prompt-gpu-graphics-deep-dive.md>) | GPU가 정점을 픽셀로 바꾸는 과정과 성능 설계 |
 
-### 🔌 Data Engineering (3)
+</details>
+
+<details>
+<summary><b>🔌 Data Engineering (3)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Spark Internals](<blueprints/dev/data engineering/prompt-spark-internals-deep-dive.md>) | DAG가 Stage로 나뉘고 Shuffle·메모리가 성능을 결정하는 방식 |
 | [Stream Processing](<blueprints/dev/data engineering/prompt-stream-processing-deep-dive.md>) | 이벤트 시간·Watermark·상태·체크포인트가 정확성을 보장하는 방식 |
 | [Columnar & Storage Format](<blueprints/dev/data engineering/prompt-columnar-storage-format-deep-dive.md>) | 컬럼 저장·인코딩·통계가 분석 쿼리를 빠르게 하는 방식 |
 
-### 📨 Messaging & Streaming (2)
+</details>
+
+<details>
+<summary><b>📨 Messaging & Streaming (2)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Kafka](<blueprints/dev/messaging & streaming/prompt-kafka-deep-dive.md>) | Kafka가 순서와 내구성을 보장하는 방식 |
 | [RabbitMQ](<blueprints/dev/messaging & streaming/prompt-rabbitmq-deep-dive.md>) | Exchange·Routing Key·Queue, 그리고 실패한 메시지의 행방 |
 
-### 🦀 Languages (Rust, Go) (2)
+</details>
+
+<details>
+<summary><b>🦀 Languages (Rust, Go) (2)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Rust](<blueprints/dev/languages (rust, go)/prompt-rust-deep-dive.md>) | 컴파일을 통과시키는 것과, 소유권 모델이 무엇을 증명하는지 아는 것 |
 | [Go](<blueprints/dev/languages (rust, go)/prompt-go-deep-dive.md>) | 런타임 스케줄러가 고루틴을 OS 스레드에 다중화하는 방식 |
 
-### 🌉 Cross Platform (3)
+</details>
+
+<details>
+<summary><b>🌉 Cross Platform (3)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Flutter](<blueprints/dev/cross platform/prompt-flutter-deep-dive.md>) | 3-Tree와 자체 렌더 엔진이 픽셀을 직접 그리는 방식 |
 | [React Native](<blueprints/dev/cross platform/prompt-react-native-deep-dive.md>) | JS와 네이티브가 통신하는 경계와 그 진화 |
 | [Kotlin Multiplatform](<blueprints/dev/cross platform/prompt-kotlin-multiplatform-deep-dive.md>) | 한 Kotlin 소스가 여러 타깃 백엔드로 컴파일되는 방식 |
 
-### 🔗 API & Communication (1)
+</details>
+
+<details>
+<summary><b>🔗 API & Communication (1)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [gRPC + Protocol Buffers](<blueprints/dev/api & communication/prompt-grpc-deep-dive.md>) | 타입 안전한 계약으로 서비스를 연결하고 통신 비용을 줄이기 |
 
-### 🛡️ Security Engineering (1)
+</details>
+
+<details>
+<summary><b>🛡️ Security Engineering (1)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Security Engineering](<blueprints/dev/security engineering/prompt-security-engineering-deep-dive.md>) | 보안 설정을 복붙하는 것과, 공격 원리를 알고 방어를 설계하는 것 |
 
-### 📈 Performance & Quality (1)
+</details>
+
+<details>
+<summary><b>📈 Performance & Quality (1)</b></summary>
+
 | 블루프린트 | 컨셉 |
 |------------|------|
 | [Performance Testing](<blueprints/dev/performance & quality/prompt-performance-testing-deep-dive.md>) | 병목 지점을 수치로 특정하고 개선을 증명하기 |
 
-### 🧬 Synthesis — 횡단 비교 (6)
+</details>
+
+<details>
+<summary><b>🧬 Synthesis — 횡단 비교 (6)</b></summary>
+
 > 개별 기술 레포가 아니라, 여러 기술이 *같은 문제에 다르게 답한 방식*을 나란히 놓는 레포. 위 레포들을 입력으로 삼는다.
 
 | 블루프린트 | 컨셉 |
@@ -342,6 +452,8 @@ prompt-blueprints/
 | [Compilation Strategies Compared](<blueprints/dev/synthesis/prompt-compilation-strategies-compared.md>) | '언제·얼마나 최적화하나'에 다르게 답한 방식 |
 | [Rendering Pipelines Compared](<blueprints/dev/synthesis/prompt-rendering-pipelines-compared.md>) | '선언→레이아웃→페인트→합성→GPU'의 다른 구현들 |
 | [Reactivity & State Compared](<blueprints/dev/synthesis/prompt-reactivity-state-compared.md>) | '의존성 추적 + 일관된 스냅샷'이 UI와 DB에서 같은 구조임 |
+
+</details>
 
 ---
 
