@@ -5,12 +5,15 @@
 이 저장소는 **딥다이브(deep-dive) 학습 레포지토리를 통째로 생성하는 메타 프롬프트(meta-prompt) 모음**입니다.
 `blueprints/` 아래의 각 `.md` 파일은 단순한 문서가 아니라, 코딩 에이전트(Claude Code, Cursor, Codex 등)에게 그대로 건네면 **하나의 완결된 학습 레포 한 채(수십 개 문서 + README + 실험 환경)** 를 설계·작성하게 만드는 **청사진(blueprint)** 입니다.
 
-현재 **135개**의 블루프린트가 두 갈래로 정리되어 있습니다.
+현재 **233개**의 블루프린트가 다섯 갈래로 정리되어 있습니다. 처음 둘은 **기술(만드는 법)**, 나머지 셋은 그리스어로 이름 붙인 **세계(돌아가는 원리)** — 자연·마음·실천지입니다.
 
 | 갈래 | 개수 | 범위 |
 |------|------|------|
 | 🤖 **AI** (`blueprints/ai`) | **48** | 수학 기초(Layer 0)부터 LLM·해석가능성(Layer 6)까지, 11개 레이어의 수직 커리큘럼 |
 | 🛠️ **Dev** (`blueprints/dev`) | **87** | JVM·Spring·DB·프론트엔드·모바일·인프라·아키텍처 등 17개 카테고리의 시스템 내부 원리 |
+| ⚛️ **Physis** (`blueprints/physis`) | **36** | 자연(φύσις) — 변분원리·대칭에서 양자·상대성·양자중력·창발까지, 물리학 7레이어 |
+| 🧠 **Psyche** (`blueprints/psyche`) | **31** | 마음(ψυχή) — 뉴런·인지에서 의식의 어려운 문제·자아까지, 마음 과학 7레이어 |
+| 🧭 **Phronesis** (`blueprints/phronesis`) | **31** | 실천지(φρόνησις) — 의사결정·돈·전략에서 게임이론·복리까지, 세상 작동법 6레이어 |
 
 ---
 
@@ -41,15 +44,20 @@ prompt-blueprints/
 ├── README.md              ← 지금 보는 문서 (전체 카탈로그 + 사용법)
 ├── core-style-guide.md    ← 모든 블루프린트·생성 레포가 따르는 공통 규약
 └── blueprints/
-    ├── ai/                ← 48개 · 11 레이어 수직 커리큘럼
+    ├── ai/                ← 48개 · 11 레이어 수직 커리큘럼 (layer0 … layer6)
     │   ├── layer0/  …  layer6/
-    └── dev/               ← 87개 · 17 카테고리
-        ├── java core/        spring ecosystem/    database/
-        ├── frontend : web/   mobile — android/    mobile — ios/
-        ├── infrastructure & devOps/   architecture & design/
-        ├── data engineering/ messaging & streaming/  …
-        └── synthesis/        ← 여러 기술을 가로지르는 횡단 비교 레포
+    ├── dev/               ← 87개 · 17 카테고리
+    │   ├── java core/        spring ecosystem/    database/
+    │   ├── frontend : web/   mobile — android/    mobile — ios/
+    │   ├── infrastructure & devOps/   architecture & design/
+    │   ├── data engineering/ messaging & streaming/  …
+    │   └── synthesis/        ← 여러 기술을 가로지르는 횡단 비교 레포
+    ├── physis/            ← 36개 · 물리/자연 (L0 … L6)
+    ├── psyche/            ← 31개 · 마음/의식 (L0 … L6)
+    └── phronesis/         ← 31개 · 실천지/세상 작동법 (L0 … L5)
 ```
+
+> **파일명 규칙:** `…-deep-dive`(AI·Dev, 완전 분해형) · `…-distilled`(Physis·Psyche·Phronesis, 본질 증류형) · `…-everywhere`(각 갈래 상위 레이어의 **횡단 종합** — "이 원리가 모든 곳에 있다").
 
 ---
 
@@ -457,6 +465,288 @@ prompt-blueprints/
 
 ---
 
+## ⚛️ Physis 카탈로그 — 자연 (36개)
+
+물리학을 **L0(사고의 도구) → L6(관통 원리)** 로 쌓는 수직 커리큘럼. 변분원리·대칭에서 출발해 양자·상대성·양자중력을 지나 "창발"로 종합합니다. (`…-distilled` 본질 증류형 · L6의 `…-everywhere`는 횡단 종합)
+
+<details>
+<summary><b>L0 — 사고의 도구 (5)</b></summary>
+
+> 물리를 푸는 게 아니라, 물리를 보는 눈. 모든 위층이 이 다섯을 다시 쓴다.
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Variational Principles](blueprints/physis/L0/prompt-variational-principles-distilled.md) | 자연은 작용을 극값으로 — 모든 레이어 운동방정식의 씨앗 |
+| [Symmetry & Conservation](blueprints/physis/L0/prompt-symmetry-conservation-distilled.md) | 대칭이 보존을 낳고(뇌터), 국소화하면 힘이 나온다(게이지) |
+| [Dimensional Analysis & Scaling](blueprints/physis/L0/prompt-dimensional-scaling-distilled.md) | 차원분석은 답의 절반을 공짜로 — 풀기 전에 형태를 본다 |
+| [Approximation & Perturbation](blueprints/physis/L0/prompt-approximation-perturbation-distilled.md) | 물리는 근사의 예술 — 근사가 깨지는 곳에 새 물리가 있다 |
+| [Measurement & Uncertainty](blueprints/physis/L0/prompt-measurement-uncertainty-distilled.md) | 관측 가능한 것만 물리 — 측정에 살아남은 것만 신뢰 |
+
+</details>
+
+<details>
+<summary><b>L1 — 고전 물리 (5)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Classical Mechanics](blueprints/physis/L1/prompt-classical-mechanics-distilled.md) | 같은 운동, 세 시선 — Newton·Lagrange·Hamilton |
+| [Electromagnetism](blueprints/physis/L1/prompt-electromagnetism-distilled.md) | 네 방정식이 빛을 예언 — 게이지 대칭이 전자기를 지정 |
+| [Oscillations & Waves](blueprints/physis/L1/prompt-oscillations-waves-distilled.md) | 평형 근처에선 모든 게 진동 — 정규모드·공명·푸리에 |
+| [Classical Field Theory](blueprints/physis/L1/prompt-classical-field-theory-distilled.md) | 입자에서 장으로 — 장을 양자화하면 입자가 나온다 |
+| [Nonlinear Dynamics & Chaos](blueprints/physis/L1/prompt-chaos-distilled.md) | 결정론인데 예측 불가, 그러나 카오스 ≠ 무작위 |
+
+</details>
+
+<details>
+<summary><b>L2 — 열·통계·시간 (5)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Thermodynamics](blueprints/physis/L2/prompt-thermodynamics-distilled.md) | 온도는 분포의 성질, 엔트로피는 시간의 화살 |
+| [Statistical Mechanics](blueprints/physis/L2/prompt-statistical-mechanics-distilled.md) | 미시에서 거시로 — 엔트로피는 무지의 척도 |
+| [Phase Transitions & Criticality](blueprints/physis/L2/prompt-phase-transitions-distilled.md) | 물이 끓는 순간 = 창발의 정수 — 보편성·재규격화군 |
+| [Arrow of Time](blueprints/physis/L2/prompt-arrow-of-time-distilled.md) | 시간의 화살은 법칙이 아니라 초기조건이다 |
+| [Fluctuations & Information](blueprints/physis/L2/prompt-fluctuations-information-distilled.md) | 요동과 소산은 하나, 정보는 물리다 (맥스웰 도깨비) |
+
+</details>
+
+<details>
+<summary><b>L3 — 양자 (6)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Quantum Mechanics](blueprints/physis/L3/prompt-quantum-mechanics-distilled.md) | 왜 세계는 이산적인가 — 중첩·불확정성·측정 |
+| [Quantum Field Theory](blueprints/physis/L3/prompt-quantum-field-theory-distilled.md) | 입자는 장의 들뜸 — 경로적분·재규격화, 진공은 비어있지 않다 |
+| [Standard Model](blueprints/physis/L3/prompt-standard-model-distilled.md) | 대칭이 힘을 낳는다 — 힉스=깨진 대칭, 세 힘의 통일과 빈틈 |
+| [Entanglement & Measurement](blueprints/physis/L3/prompt-entanglement-measurement-distilled.md) | 벨 부등식 — 자연은 국소적이지 않다, 결잃음이 고전성을 창발 |
+| [Quantum Information](blueprints/physis/L3/prompt-quantum-information-distilled.md) | 얽힘을 자원으로 — 양자 알고리즘은 간섭을 쓴다 |
+| [Emergent Quantum Matter](blueprints/physis/L3/prompt-emergent-quantum-matter-distilled.md) | 'More is Different' — 준입자·위상물질·창발 게이지장 |
+
+</details>
+
+<details>
+<summary><b>L4 — 상대성 & 우주 (5)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Special Relativity](blueprints/physis/L4/prompt-special-relativity-distilled.md) | 빛의 속도는 시공간의 구조 상수 — 질량은 에너지다 |
+| [General Relativity](blueprints/physis/L4/prompt-general-relativity-distilled.md) | 중력은 힘이 아니라 기하 — 질량이 시공간을 휜다 |
+| [Astrophysics](blueprints/physis/L4/prompt-astrophysics-distilled.md) | 우리는 별의 먼지 — 별의 일생은 양자+열역학+중력 |
+| [Black Holes](blueprints/physis/L4/prompt-black-holes-distilled.md) | 모든 레이어가 충돌 — 호킹 복사, 엔트로피는 면적, 정보 역설 |
+| [Cosmology](blueprints/physis/L4/prompt-cosmology-distilled.md) | 우주는 어떻게 시작했나 — 빅뱅·암흑우주·인플레이션 |
+
+</details>
+
+<details>
+<summary><b>L5 — 양자중력 최전선 (5)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Quantum Gravity](blueprints/physis/L5/prompt-quantum-gravity-distilled.md) | 두 기둥이 충돌하는 곳 — 답이 아니라 질문이다 |
+| [String Theory](blueprints/physis/L5/prompt-string-theory-distilled.md) | 점에서 끈으로 — 중력이 자동으로, 쌍대성이 '근본'을 흔든다 |
+| [Loop Quantum Gravity](blueprints/physis/L5/prompt-loop-quantum-gravity-distilled.md) | 시공간 자체를 양자화 — 배경 독립·이산 기하 |
+| [Holographic Principle](blueprints/physis/L5/prompt-holographic-principle-distilled.md) | 정보가 면적에 산다 — 얽힘이 시공간을 만든다 |
+| [Emergent Spacetime & Multiverse](blueprints/physis/L5/prompt-emergent-spacetime-multiverse-distilled.md) | 시공간은 창발하는가, 우주는 여럿인가 — 이것은 과학인가 |
+
+</details>
+
+<details>
+<summary><b>L6 — 관통 원리 (5 · everywhere)</b></summary>
+
+> 아래 레이어 전체를 하나의 원리로 회수하는 횡단 종합.
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Least Action Everywhere](blueprints/physis/L6/prompt-least-action-everywhere.md) | 하나의 변분 원리가 고전·장·상대성·양자·끈을 관통 |
+| [Symmetry Everywhere](blueprints/physis/L6/prompt-symmetry-everywhere.md) | 법칙의 대칭이 보존·힘·질량·분류·쌍대성을 잇는다 |
+| [Entropy & Time Everywhere](blueprints/physis/L6/prompt-entropy-time-everywhere.md) | 통계·우주·블랙홀·창발을 잇는 하나의 화살 |
+| [Information Everywhere](blueprints/physis/L6/prompt-information-everywhere.md) | 정보는 물리다 (it-from-bit) |
+| [Emergence](blueprints/physis/L6/prompt-emergence-distilled.md) | More is Different — 창발의 사다리, 연구소 전체의 마무리 |
+
+</details>
+
+---
+
+## 🧠 Psyche 카탈로그 — 마음 (31개)
+
+뉴런이라는 **3인칭의 단단한 바닥**에서 출발해 인지·기계·의식을 거쳐 자아·자유의지·"의식의 어려운 문제"까지 올라가는 마음 과학 7레이어.
+
+<details>
+<summary><b>L0 — 설명의 틀 (5)</b></summary>
+
+> 마음을 연구하기 전에, 무엇을 어떤 층위에서 설명할지부터.
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Mind–Body Map](blueprints/psyche/L0/prompt-mind-body-map-distilled.md) | 마음-몸 문제의 지형도 — 어디서 설명적 간극에 부딪히나 |
+| [Levels of Explanation](blueprints/psyche/L0/prompt-levels-of-explanation-distilled.md) | Marr의 세 층위로 마음 과학의 설명 구조를 해부 |
+| [Computation & Representation](blueprints/psyche/L0/prompt-computation-representation-distilled.md) | 물질이 '무언가에 관한 것'이 되나 — 지향성·표상·계산 |
+| [Information & Prediction](blueprints/psyche/L0/prompt-information-prediction-distilled.md) | 뇌는 예측 기계 — 정보이론·베이즈로 마음의 알고리즘 |
+| [Methods for the First Person](blueprints/psyche/L0/prompt-first-person-methods-distilled.md) | 경험을 측정하는 방법 — 정신물리·내성·현상학·NCC 비교 |
+
+</details>
+
+<details>
+<summary><b>L1 — 뇌의 하드웨어 (4)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Neurons & Neural Codes](blueprints/psyche/L1/prompt-neurons-neural-codes-distilled.md) | 뉴런은 무엇을 계산하나 — 활동전위에서 집단 부호화 |
+| [Neuromodulation & Arousal](blueprints/psyche/L1/prompt-neuromodulation-arousal-distilled.md) | 도파민은 행복이 아니다 — 계산 상태 전환, 각성 스위치 |
+| [Plasticity & Learning](blueprints/psyche/L1/prompt-plasticity-learning-distilled.md) | 경험이 물질에 새겨지는 법 — 헵·STDP·엔그램 |
+| [Brain Architecture](blueprints/psyche/L1/prompt-brain-architecture-distilled.md) | 왜 뇌는 이렇게 조직됐나 — 피질·시상·기저핵·소뇌의 분업 |
+
+</details>
+
+<details>
+<summary><b>L2 — 인지 (6)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Perception](blueprints/psyche/L2/prompt-perception-distilled.md) | 본다는 것은 추론 — 예측처리·베이즈 지각 |
+| [Attention & Working Memory](blueprints/psyche/L2/prompt-attention-working-memory-distilled.md) | 한 번에 조금밖에 못 잡는 계산적 이유 |
+| [Memory](blueprints/psyche/L2/prompt-memory-distilled.md) | 기억은 재생이 아니라 재구성 — 거짓기억의 불가피성 |
+| [Learning & Decision](blueprints/psyche/L2/prompt-learning-decision-distilled.md) | 마음은 어떻게 가치를 계산하나 — 강화학습의 심리학 |
+| [Emotion & Motivation](blueprints/psyche/L2/prompt-emotion-motivation-distilled.md) | 감정은 합리의 적이 아니라 평가 시스템 |
+| [Language & Concepts](blueprints/psyche/L2/prompt-language-concepts-distilled.md) | 언어는 사고를 가두나 해방하나 — 합성성·언어 상대성 |
+
+</details>
+
+<details>
+<summary><b>L3 — 마음과 기계 (3)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Computational Theory of Mind](blueprints/psyche/L3/prompt-computational-mind-distilled.md) | 마음은 소프트웨어인가 — 기능주의·중국어 방 |
+| [Embodied & Enactive Mind](blueprints/psyche/L3/prompt-embodied-mind-distilled.md) | 마음은 뇌 안에만 있지 않다 — 4E 인지 |
+| [Brains vs Artificial Networks](blueprints/psyche/L3/prompt-brains-vs-networks-distilled.md) | 인공 신경망은 뇌를 얼마나 닮았나 |
+
+</details>
+
+<details>
+<summary><b>L4 — 의식 (4)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [The Hard Problem](blueprints/psyche/L4/prompt-hard-problem-distilled.md) | 왜 정보 처리에 느낌이 따라붙나 — 좀비 논변·설명적 간극 |
+| [Neural Correlates of Consciousness](blueprints/psyche/L4/prompt-ncc-distilled.md) | 의식을 가르는 신경 서명 — 상관에서 원인으로의 거리 |
+| [Theories of Consciousness](blueprints/psyche/L4/prompt-theories-of-consciousness-distilled.md) | GWT·IIT·고차·예측처리 — 정직한 비교와 반증 예측 |
+| [Altered & Edge States](blueprints/psyche/L4/prompt-altered-states-distilled.md) | 의식이 흐트러질 때 구조가 드러난다 — 수면·마취·환각제·명상 |
+
+</details>
+
+<details>
+<summary><b>L5 — 자아·자유·타인 (4)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [The Self & Self-Model](blueprints/psyche/L5/prompt-self-model-distilled.md) | '나'는 실체인가 과정인가 — 자기모델·신체적/서사적 자아 |
+| [Free Will & Agency](blueprints/psyche/L5/prompt-free-will-agency-distilled.md) | 리벳 실험은 자유의지를 부정하나 — 양립가능론·행위주체감 |
+| [Other Minds & Social Cognition](blueprints/psyche/L5/prompt-other-minds-distilled.md) | 타인의 마음을 어떻게 아나 — 마음이론·거울뉴런 |
+| [Meaning, Mortality & the Examined Life](blueprints/psyche/L5/prompt-meaning-mortality-distilled.md) | 의미는 어디서 오고 유한한 자아는 어떻게 견디나 |
+
+</details>
+
+<details>
+<summary><b>L6 — 관통 원리 (5 · everywhere)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Prediction Everywhere](blueprints/psyche/L6/prompt-prediction-everywhere.md) | 하나의 추론 원리가 마음 전체를 관통 — RPE·자유에너지·능동추론 |
+| [Representation Everywhere](blueprints/psyche/L6/prompt-representation-everywhere.md) | 물질이 '무언가에 관한 것'이 되는 동형성 |
+| [Binding & Integration Everywhere](blueprints/psyche/L6/prompt-binding-integration-everywhere.md) | 분산된 처리가 하나의 경험이 되는 문제 |
+| [The Strange Loop](blueprints/psyche/L6/prompt-strange-loop-everywhere.md) | 자신을 가리키는 고리 — 메타인지·자기참조 횡단 |
+| [Emergence — Mind from No-Mind](blueprints/psyche/L6/prompt-mind-emergence-distilled.md) | 물질에서 마음이 나오는데 물질-언어로 환원 안 되는 이유 |
+
+</details>
+
+---
+
+## 🧭 Phronesis 카탈로그 — 실천지 (31개)
+
+세상이 실제로 돌아가는 법 — 의사결정·돈·설득·전략·역사를 **L0(판단의 토대) → L5(관통 원리)** 로. 모든 블루프린트가 "아는 것"과 "실제로 행동을 바꾸는 것"의 간극을 겨냥합니다.
+
+<details>
+<summary><b>L0 — 사고·판단의 토대 (5)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Mental Models](blueprints/phronesis/L0/prompt-mental-models-distilled.md) | 어떤 문제에 어떤 모델, 어디서 모델이 깨지나 |
+| [Decision Theory](blueprints/phronesis/L0/prompt-decision-theory-distilled.md) | 결과가 아니라 결정 시점의 정보로 결정의 질을 평가 |
+| [Probabilistic Thinking](blueprints/phronesis/L0/prompt-probabilistic-thinking-distilled.md) | 다음 결정의 성공 확률·기댓값·베팅 크기를 숫자로 |
+| [Statistics Literacy](blueprints/phronesis/L0/prompt-statistics-literacy-distilled.md) | '분모가 뭐지? 누가 빠졌지? 우연일 확률은?'을 반사적으로 |
+| [Cognitive Bias](blueprints/phronesis/L0/prompt-cognitive-bias-distilled.md) | 편향 지식이 행동을 못 바꾸는 이유 — 시스템으로 방어 |
+
+</details>
+
+<details>
+<summary><b>L1 — 돈·금융 (7)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Money & Interest](blueprints/phronesis/L1/prompt-money-and-interest-distilled.md) | 금리가 모든 가치평가의 분모가 되는 구조 |
+| [Personal Finance](blueprints/phronesis/L1/prompt-personal-finance-distilled.md) | 저축률×시간×복리가 부의 방정식 대부분을 결정 |
+| [Financial Statements](blueprints/phronesis/L1/prompt-financial-statements-distilled.md) | 이익은 의견, 현금은 사실 — 세 표를 교차 심문 |
+| [Valuation](blueprints/phronesis/L1/prompt-valuation-distilled.md) | 가치 = 미래 현금흐름의 할인, 가정 1%p가 결론을 뒤흔든다 |
+| [Unit Economics](blueprints/phronesis/L1/prompt-unit-economics-distilled.md) | 고객 한 단위의 경제가 양수이고 규모에서 유지되는가 |
+| [Markets & Investing](blueprints/phronesis/L1/prompt-markets-investing-distilled.md) | 알파는 제로섬·베타는 포지티브섬, 설 자리를 고른다 |
+| [Macro & Cycles](blueprints/phronesis/L1/prompt-macro-cycles-distilled.md) | 예측은 포기, 사이클의 위치를 추정해 어디서도 죽지 않게 |
+
+</details>
+
+<details>
+<summary><b>L2 — 설득·성장·시장 (6)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Persuasion Psychology](blueprints/phronesis/L2/prompt-persuasion-psychology-distilled.md) | 각 기법이 어떤 인지적 지름길에 올라타나 — 만들고 막기 |
+| [Copy & Narrative](blueprints/phronesis/L2/prompt-copy-narrative-distilled.md) | 글의 목적은 행동 — 주목→이해→설득→행동 설계 |
+| [Positioning & Brand](blueprints/phronesis/L2/prompt-positioning-brand-distilled.md) | 브랜드 = 기억 구조 — 멘탈 어베일러빌리티 설계 |
+| [Pricing](blueprints/phronesis/L2/prompt-pricing-distilled.md) | 고객마다 다른 WTP 분포를 측정, 자기 선택으로 잉여 회수 |
+| [Funnel & Growth](blueprints/phronesis/L2/prompt-funnel-growth-distilled.md) | 성장 방정식의 어느 항이 병목인지 진단·실험 |
+| [Negotiation](blueprints/phronesis/L2/prompt-negotiation-distilled.md) | 협상력 = 대안의 함수, 준비가 8할, 과정으로 채점 |
+
+</details>
+
+<details>
+<summary><b>L3 — 전략·게임·제도 (5)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Microeconomics](blueprints/phronesis/L3/prompt-microeconomics-distilled.md) | 수요·공급 곡선이 무엇의 집계인가, 시장이 실패하는 세 곳 |
+| [Game Theory](blueprints/phronesis/L3/prompt-game-theory-distilled.md) | 균형이 최선이 아님을 알고 보수 구조를 바꾼다 |
+| [Incentive Design](blueprints/phronesis/L3/prompt-incentive-design-distilled.md) | 보상이 정확히 무엇을 움직이나(대개 의도와 다른 것) |
+| [Strategy & Moats](blueprints/phronesis/L3/prompt-strategy-moats-distilled.md) | 해자의 메커니즘·측정·침식 조건을 정직하게 감사 |
+| [Law for Founders](blueprints/phronesis/L3/prompt-law-for-founders-distilled.md) | 법 = 게임의 규칙, 확률×손해의 기댓값으로 리스크 관리 |
+
+</details>
+
+<details>
+<summary><b>L4 — 역사·세상 읽기 (4)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Tech Adoption](blueprints/phronesis/L4/prompt-tech-adoption-distilled.md) | 성능이 아니라 확산의 구조(곡선·보완재·생태계·타이밍) |
+| [Corporate Rise & Fall](blueprints/phronesis/L4/prompt-corporate-rise-fall-distilled.md) | 생존편향·후광효과를 방어하며 승자·패자를 쌍으로 해부 |
+| [Economic History](blueprints/phronesis/L4/prompt-economic-history-distilled.md) | 역사를 이론의 검증 데이터로 — 후견지명의 함정 방어 |
+| [Geopolitics](blueprints/phronesis/L4/prompt-geopolitics-distilled.md) | 국가 행동을 게임 구조로, 노출을 측정해 예측 없이 대비 |
+
+</details>
+
+<details>
+<summary><b>L5 — 관통 원리 (4 · everywhere)</b></summary>
+
+| 블루프린트 | 컨셉 |
+|------------|------|
+| [Compounding Everywhere](blueprints/phronesis/L5/prompt-compounding-everywhere.md) | 재투자 구조가 있는 모든 곳의 같은 지수 과정 |
+| [Feedback Loops Everywhere](blueprints/phronesis/L5/prompt-feedback-loops-everywhere.md) | 뱅크런·바이럴·플라이휠이 같은 두 루프의 변주 |
+| [Incentives Everywhere](blueprints/phronesis/L5/prompt-incentives-everywhere.md) | 처음 보는 시스템의 행동을 보수 구조에서 역산 |
+| [Leverage Everywhere](blueprints/phronesis/L5/prompt-leverage-everywhere.md) | 자본·코드·미디어·신뢰가 전부 배율 자산, 양면을 관리 |
+
+</details>
+
+---
+
 ## 🧩 블루프린트 해부 (Anatomy)
 
 모든 블루프린트는 공통 골격을 공유합니다. 자세한 규약은 [`core-style-guide.md`](core-style-guide.md)에 정의되어 있습니다.
@@ -485,7 +775,7 @@ prompt-blueprints/
 
 ## 🤝 새 블루프린트 추가하기
 
-1. 알맞은 카테고리 폴더에 `prompt-{주제}-deep-dive.md`로 생성한다. (대소문자·하이픈 컨벤션 준수)
+1. 알맞은 폴더에 갈래 규칙에 맞는 이름으로 생성한다 — AI·Dev는 `prompt-{주제}-deep-dive.md`, Physis·Psyche·Phronesis는 `prompt-{주제}-distilled.md`, 상위 레이어 횡단 종합은 `prompt-{주제}-everywhere.md`. (대소문자·하이픈 컨벤션 준수)
 2. [`core-style-guide.md`](core-style-guide.md)의 골격과 두 표준 문서 구조 중 하나를 채택한다.
 3. 첫 문장은 반드시 **"…하는 것과 …아는 것은 다르다"** 패턴으로 *사용 vs 본질*의 간극을 못 박는다.
 4. 이 README의 해당 카테고리 표에 한 줄(`블루프린트 | 컨셉`)을 추가한다.
